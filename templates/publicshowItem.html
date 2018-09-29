@@ -1,0 +1,34 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+	<div class="row divider green">
+		<div class="col-md-12"></div>
+	</div>
+	<div class="row banner menu">
+		<div class="col-md-11 col-md-offset-1 padding-none">
+			<h1>{{ catalog.name }}
+			<figure class="creator">
+				<img src="{{ creator.picture}}">
+				<figcaption>{{ creator.name }}</figcaption>
+			</figure>
+			</h1>
+
+		</div>
+	</div>
+<div class="container" style="padding:20px; margin-left:200px;">
+		<div class="cardc" >
+				<div class="cardc-image">
+					<img src="{{item.picture}}" alt="Card image">
+				</div>
+				<div class="cardc-content">
+					<p class="cardc-header">{{item.name}}</p>
+					<p class="cardc-description">{{item.description}}</p>
+					   <p class="cardc-price"> $ {{item.price}}</p>
+				</div>
+			</div>
+	
+	</div>
+	
+	
+{% endblock %}
