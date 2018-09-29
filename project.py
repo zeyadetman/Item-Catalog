@@ -375,7 +375,7 @@ def newCategoryItem(category_id):
             description=request.form['description'],
             price=request.form['price'],
             picture=request.form['picture'],
-            catalog=catalog
+            category_id=category_id
         )
         session.add(item)
         session.commit()
